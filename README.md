@@ -13,7 +13,7 @@ Simple but powerfull middleware to randomly generate strings for  api key ,trans
 ## Usage
 
 ```javascript
-const generateKey = require("generateKey");
+const keygenerate = require("keygenerate");
 
 /*
  * Default configuration
@@ -24,19 +24,19 @@ const generateKey = require("generateKey");
  * generating a random api key with a length of 40 chars
  *
  */
-let apiKey = generateKey(40);
+let apiKey = keygenerate(40);
 // >> "QNpZpcAUReESnhfkmVmChk51X35IXREAX6U3j1Tp"
 /*
  * generating a random api password with length of 20 chars
  *
  */
-let apipassword = generateKey(20);
+let apipassword = keygenerate(20);
 // >> "pq1l13BiXAtRINsxeWMT"
 /*
  * generating a random transction id with length of 10 chars
  *
  */
-let transction_id = generateKey(10);
+let transction_id = keygenerate(10);
 // >> "eEWUtRyXLjXehnu"
 
 

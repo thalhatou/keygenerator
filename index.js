@@ -1,10 +1,10 @@
 const crypto = require('crypto');
-function generateKey(length) {
+function keygenerate(length) {
     //we store all the characters we need to generate our api key from.
     let chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     let key = "";
     /*
-The for loop iterates over each byte and the modulo operator is used to determine the index abd select a character from the chars variable that correspond to the index
+The for loop iterates over each byte and the modulo operator is used to determine the index and select a character from the chars variable that correspond to the index to store in the key variable
 */
     const random = crypto.randomBytes(length);
     for (let i = 0; i < random.length; i++) {
@@ -16,5 +16,5 @@ The for loop iterates over each byte and the modulo operator is used to determin
 }
 
 module.exports = {
-    generateKey
+    keygenerate
 }
