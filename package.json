@@ -1,0 +1,21 @@
+{
+  "name": "keygenerator",
+  "version": "1.0.0",
+  "description": "Simple but powerfull middleware to randomly generate api key and api password for your node project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "apikey",
+    "apipassword",
+    "password",
+    "authorization",
+    "key",
+    "authorization",
+    "key"
+  ],
+  "author": "Thalhatou Yahya",
+  "license": "MIT"
+}
