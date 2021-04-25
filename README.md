@@ -1,8 +1,8 @@
 # keygenerate
-Simple but powerfull middleware to randomly generate api key and api password for your nodejs project
+Simple but powerfull middleware to randomly generate strings for  api key ,transction key  and api password for your nodejs  project
 
 
-simple Random string generator for your node.js project that you can used to generate api key and api password for your next project
+
 
 ## Installation
 
@@ -13,88 +13,34 @@ simple Random string generator for your node.js project that you can used to gen
 ## Usage
 
 ```javascript
-const keygenerator = require("generateKey");
+const generateKey = require("generateKey");
 
 /*
  * Default configuration
- * length: 0 
+ * length: whenever you call the function you passed the length as argument.
  */
-keygen._();
-// >> "8MRXnoG3nTmjb35U0tFwnoZpdCBBj5EX"
-
-keygen._({
-    forceUppercase: true
-});
-// >> "F4ZCPNOX7BWK7XWDXGSA5BPHCCCLGCRZ"
-
-keygen._({
-    specials: true
-});
-// >> "3L0KpE{pb.U3(Tu42,*,aNxBpb(}Mfy|"
 
 /*
- * Configuration for password()
- *
- * chars: true
- * sticks: false
- * numbers: true
- * specials: false
- * length: 8 <- overrideable
- * forceUppercase: false
- * forceLowercase: false
- * exclude:['O', '0', 'I', '1']
+ * generating a random api key with a length of 40 chars
  *
  */
-keygen.password();
-// >> "d4pTgrCY"
-
+let apiKey = generateKey(40);
+// >> "QNpZpcAUReESnhfkmVmChk51X35IXREAX6U3j1Tp"
 /*
- * Configuration for session_id()
- *
- * chars: true
- * sticks: true
- * numbers: true
- * specials: false
- * length: 32 <- overrideable
- * forceUppercase: false
- * forceLowercase: false
- * exclude:[ ]
+ * generating a random api password with length of 20 chars
  *
  */
-keygen.session_id();
-// >> "7YFSfsiM3NgE76fZa5vrjHmftKZwuiJv"
-
+let apipassword = generateKey(20);
+// >> "pq1l13BiXAtRINsxeWMT"
 /*
- * Configuration for transaction_id()
- *
- * chars: true
- * sticks: true
- * numbers: true
- * specials: true
- * length: 6 <- overrideable
- * forceUppercase: false
- * forceLowercase: false
- * exclude:[ ]
+ * generating a random transction id with length of 10 chars
  *
  */
-keygen.transaction_id();
-// >> "lTrGjp"
+let transction_id = generateKey(10);
+// >> "eEWUtRyXLjXehnu"
 
-/*
- * Configuration for transaction_id()
- *
- * chars: false
- * sticks: false
- * numbers: true
- * specials: false
- * length: 8 <- overrideable
- * forceUppercase: false
- * forceLowercase: false
- * exclude:[ ]
- *
- */
-keygen.number();
-// >> "37883189"
+
+
 
 ```
 
@@ -108,6 +54,9 @@ chars (bool)
 
 numbers (bool)
 > 0123456789
+
+
+
 
 
 ## Licence
